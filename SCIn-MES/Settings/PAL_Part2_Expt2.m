@@ -6,6 +6,8 @@ switch opt
         
     % settings options
     h.SettingsOptions = {'Pre_Discrim','Cond','Post_Discrim','Post_Gen','Unpl_Discrim'};
+    Screen('Preference', 'SkipSyncTests', 1); %MES added 16/01/19 to avoid synchronisation issues which commonly occur on windows- need this to be 0 (or deleted) when precise timing of stimulus presentation is required
+    %move the above to a different script- no effect in this one)
     
 case 'Pre_Discrim'
 

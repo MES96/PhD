@@ -1,6 +1,6 @@
 function varargout = scin(varargin)
 
-% GUI:
+% GUI: 
 % display messages stating trial number, block number, ready to startstop next block, etc.
 % select blocks with GUI by adding block number to h.Seq, e.g. row 4, and
 % remove code from TSOT

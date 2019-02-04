@@ -1,1 +1,1 @@
-root='C:\Data\Matlab\SCIn';
+root='C:\Users\mes96\Documents\GitHub\PhD\SCIn-MES';
