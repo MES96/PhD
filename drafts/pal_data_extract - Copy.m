@@ -40,9 +40,21 @@ DON'T NEED TO DO THIS BECAUSE PRESSTIRAL ALREADY INDICATES WHICH TRIAL THEY ANSW
             %out.analysis.PT4(5,:) = out.pressbutton
    
   SECOND PLAN: CHECK PRESSTIRAL
+  % Make copy of presstrial
+        %out.analysis.PT = out.presstrial
   % Identify what the difference is between the presstrial values (value of 0 indicates that that trial was the same trial number as the next)
         % idx = diff(out.analysis.PT)
-  %Copy pressbutton trials and convert them to numbers (1 = rightarrow, 0 =
-  %left
+        % A=1
+        % idx2 = [idx A]
+        % out.analysis.PT(2,:) = idx2
+  %Copy pressbutton trials and convert them to numbers (1 = rightarrow, 0 =  %leftarrow)
         %out.analysis.PB = out.pressbutton
-  %  
+        %PB2 = out.analysis.PB(1,:)== "RightArrow"
+ %Concatenate responses into one array
+        %out.analysis.PT(3,:) = PB2
+        %out.analysis.PT(4,:) = out.RT
+        %out.analysis.PT(5,:) = out.presstime
+ %Remove columns if the difference identified was 0 (in row 2)
+        %remdat = any(out.analysis.PT(2,:)== 0, 1)
+        %out.analysis.PT(:,remdat) = []
+ 
